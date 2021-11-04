@@ -9381,7 +9381,7 @@ void __init sched_init(void)
 	wait_bit_init();
 
 #ifdef CONFIG_TT_SCHED
-	printk(KERN_INFO "TT CPU scheduler v5.15 by Hamad Al Marri.");
+	printk(KERN_INFO "TT CPU scheduler v5.15-rt17 by Hamad Al Marri.");
 #endif
 
 #ifdef CONFIG_FAIR_GROUP_SCHED
