@@ -61,6 +61,12 @@ choice
 	 low latency. The response and interactive processes with 1666 Hz
 	 feel much snappier.
 
+	config HZ_10000
+		bool "10000 HZ"
+	help
+	 10k Hz. You would be lucky if the kernel can finish its job before
+	 the next tick happens (if you chose 10k Hz, it will tick every 100us).
+
 endchoice
 
 config HZ
@@ -71,6 +77,7 @@ config HZ
 	default 833 if HZ_833
 	default 1000 if HZ_1000
 	default 1666 if HZ_1666
+	default 10000 if HZ_10000
 
 config SCHED_HRTICK
 	def_bool HIGH_RES_TIMERS
